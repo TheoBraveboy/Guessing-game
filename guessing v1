@@ -5,59 +5,57 @@ int main() {
 	int guess;
 	int number = rand() % 1000 + 1;
 	int answer;
-	cout << "I have a number between 1 and 1000.\n Can you guess my number?\n Please type a number." << endl;
+	cout << "Welcome to the number guessing game."<<endl<<"Do you wish to play?(type 1 for yes and 2 for no):"<<endl;
+	cin >> answer;
+	if (answer == 2) {
+		cout << "Thanks for playing. see you next time!!" << endl<<endl;
+		system("pause");
+		return 0;
+
+	}
+
+	cout << "I have a number between 1 and 1000.\n Can you guess my number?"<<endl<<" Please type a number." << endl;
 	cin >> guess;
 	
-	while (answer == 1) {
+	while (answer == 1) 
+	{
 		while (guess != number)
 		{
-        if (guess > number) {
+
+			if (guess > number) 
+			{
 				cout << " The number is too big try again!!\n";
 				cin >> guess;
 			}
-			else if (guess < number) {
+			else if (guess < number) 
+			{
 				cout << " The number is too small try again!!\n";
 				cin >> guess;
 			}
-			else {
+			else 
+			{
 				cout << "You got the right number, Very Nice!!\n" << "The number was " << number << "!!!!";
 				break;
 			}
-			}
+
+
+		}
+		
+
+
 		cout << "Do you wish to try again press 1 for yes or 2 for no\n";
 		cin >> answer;
-		if (answer == 1) {
+		if (answer == 1) 
+		{
 
 			cout << "I have a number between 1 and 1000.\n Can you guess my number?\n Please type your first guess." << endl;
 			cin >> guess;
 
 		}
-		else if (answer == 2) {
-			cout << "Thanks for playing. see you next time!!" << endl;
-			system("pause");
-
+		if (answer == 2) 
+		{
+			break;
 		}
 	}
+	cout << "Thanks for playing. see you next time!!" << endl;
 	system("pause");
-}
-
-
-		
-
-
-		
-		
-
-
-
-
-
-
-
-	
-	
-		
-	
-
-
-	
